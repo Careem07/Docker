@@ -1,0 +1,12 @@
+version: '3'
+services:
+  server:
+    image: app-docker
+    ports:
+      - 8080:8080
+
+  client:
+    image: frontapp-docker
+    environment:
+      SERVER_HOST: server
+      SERVER_PORT: 8080
