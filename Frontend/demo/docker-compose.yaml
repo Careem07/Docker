@@ -10,3 +10,9 @@ services:
     environment:
       SERVER_HOST: server
       SERVER_PORT: 8080
+      
+  rebbitmq:
+    image: rabbitmq:3.9-management-alpine
+    ports:
+      - 5673:5672
+      - 15673:15672
